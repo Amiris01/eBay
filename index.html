@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electronics, Cars, Fashion, Collectibles & More - eBay</title>
+    <link rel="icon" type="image/x-icon" href="/asset/favicon.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header style="padding: 0px 50px">
+      <ul>
+        <div class="left-items">
+          <li>
+            Hi!
+            <span
+              ><a
+                href="https://signin.ebay.com.my/ws/eBayISAPI.dll?SignIn&sgfl=gh&ru=https%3A%2F%2Fwww.ebay.com.my%2F"
+                >Sign in</a
+              ></span
+            >
+            or
+            <span
+              ><a
+                href="https://signup.ebay.com.my/pa/crte?ru=https%3A%2F%2Fwww.ebay.com.my%2F"
+                >register</a
+              ></span
+            >
+          </li>
+          <li>Help & Contact</li>
+        </div>
+        <div class="right-items">
+          <li>Sell</li>
+          <li class="dropdown">
+            <button class="dropdown-switch" style="font-size: 12px">
+              My eBay
+              <img src="asset/down.png" alt="Dropdown" style="width: 7px" />
+            </button>
+            <ul class="dropdown-menu">
+              <li style="padding-top: 15px"><a href="#">Summary</a></li>
+              <li><a href="#">Recently Viewed</a></li>
+              <li><a href="#">Bids/Offers</a></li>
+              <li><a href="#">Watch List</a></li>
+              <li><a href="">Purchase History</a></li>
+              <li><a href="">Selling</a></li>
+              <li><a href="">Saved Searches</a></li>
+              <li><a href="">Saved Sellers</a></li>
+              <li style="padding-bottom: 10px"><a href="">Messages</a></li>
+            </ul>
+          </li>
+          <li class="notification">
+            <button onclick="toggleNotificationMenu()">
+              <img src="asset/bell.png" alt="Notifications" />
+            </button>
+            <ul class="notification-menu">
+              <li class="notification-message">
+                Please <a href="#">sign-in </a>to view <br />notifications.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <button title="Cart"><img src="asset/cart.png" /></button>
+          </li>
+        </div>
+      </ul>
+    </header>
+    <hr class="m-2" />
+
+    <div style="display: flex; align-items: center; justify-content: center">
+      <div class="search-container">
+        <img src="asset/ebay.png" alt="eBay Logo" class="logo" />
+        <div class="shop-category">
+          <button
+            type="button"
+            class="btn btn-link p-0 d-flex align-items-center"
+            onclick="toggleDropdown()"
+            style="text-decoration: none; color: #707070"
+          >
+            <span class="me-2" style="font-size: 12px">
+              Shop by<br />
+              category
+            </span>
+            <img src="asset/down.png" alt="Dropdown" class="dropdown-icon" />
+          </button>
+          <div id="dropdown-menu" class="dropdown-content">
+            <table class="category-table">
+              <tr>
+                <th><a href="#collectibles">Collectibles</a></th>
+                <th><a href="#fashion">Fashion</a></th>
+                <th><a href="#jewellery">Jewellery & Watches</a></th>
+              </tr>
+              <tr>
+                <td><a href="#animation-art">Animation Art & Characters</a></td>
+                <td><a href="#mens-clothing">Men's Clothing</a></td>
+                <td><a href="#watches">Watches</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#decorative-collectibles">Decorative Collectibles</a>
+                </td>
+                <td><a href="#womens-clothing">Women's Clothing</a></td>
+                <td><a href="#diamonds-gems">Loose Diamonds & Gems</a></td>
+              </tr>
+              <tr>
+                <td><a href="#fantasy-magic">Fantasy & Magic</a></td>
+                <td><a href="#mens-accessories">Mens' Accessories</a></td>
+                <td><a href="#fine-jewellery">Fine Jewellery</a></td>
+              </tr>
+              <tr>
+                <td><a href="#tobacciana">Tobacciana</a></td>
+                <td><a href="#womens-accessories">Womens' Accessories</a></td>
+                <td><a href="#fashion-jewellery">Fashion Jewellery</a></td>
+              </tr>
+              <tr class="category2">
+                <th><a href="#computers-tablets">Computer & Tablets</a></th>
+                <th><a href="#health-beauty">Health & Beauty</a></th>
+                <th><a href="#toys-hobbies">Toys & Hobbies</a></th>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#laptop-accessories">Laptop & Desktop Accessories</a>
+                </td>
+                <td><a href="#fragrances">Fragrances</a></td>
+                <td><a href="#action-figures">Action Figures</a></td>
+              </tr>
+              <tr>
+                <td><a href="#laptops-netbooks">Laptops & Netbooks</a></td>
+                <td><a href="#skincare">Skincare</a></td>
+                <td><a href="#tv-toys">TV, Movie & Character Toys</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#tablet-accessories"
+                    >iPad, Tablet, eBook Accessories</a
+                  >
+                </td>
+                <td><a href="#makeup">Makeup</a></td>
+                <td><a href="#diecast-vehicles">Diecast vehicles</a></td>
+              </tr>
+              <tr>
+                <td><a href="#storage-media">Drives, Storage & Media</a></td>
+                <td><a href="#massage">Massage</a></td>
+                <td><a href="#other-toys">Other</a></td>
+              </tr>
+              <tr class="category3">
+                <th><a href="#electronics">Electronics</a></th>
+                <th><a href="#home-garden">Home & Garden</a></th>
+                <th><a href="#other">Other</a></th>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#home-audio">Home Audio Stereos, Components</a>
+                </td>
+                <td><a href="#kitchen-bar">Kitchen, Dining & Bar</a></td>
+                <td>
+                  <a href="#mobile-accessories">Mobile Phones & Accessories</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="#gadgets">Gadgets</a></td>
+                <td><a href="#home-furniture">Home Furniture</a></td>
+                <td><a href="#books">Books</a></td>
+              </tr>
+              <tr>
+                <td><a href="#tv-video">TV, Video & Audio Home</a></td>
+                <td><a href="#major-appliances">Major Appliances</a></td>
+                <td><a href="#cameras-photo">Cameras & Photo</a></td>
+              </tr>
+              <tr>
+                <td><a href="#mp3-players">MP3 Players</a></td>
+                <td>
+                  <a href="#yard-garden">Yard, Garden & Outdoor Living</a>
+                </td>
+                <td><a href="#coins-currency">Coins & Currency</a></td>
+              </tr>
+            </table>
+            <hr />
+            <span
+              ><a href="" style="color: #0064d2">See All Category >></a></span
+            >
+          </div>
+        </div>
+        <input
+          type="text"
+          class="search-bar"
+          placeholder="Search for anything"
+        />
+        <select class="category-dropdown">
+          <option>All Categories</option>
+          <option>Antiques</option>
+          <option>Art</option>
+          <option value="">Baby</option>
+          <option value="">Books</option>
+          <option value="">Business & Industrial</option>
+          <option value="">Cameras & Photo</option>
+          <option value="">Cell Phones & Accessories</option>
+          <option value="">Clothing, Shoes & Accessories</option>
+          <option value="">Coins & Paper Money</option>
+          <option value="">Collectibles</option>
+          <option value="">Computers/Tablets & Networking</option>
+          <option value="">Consumer Electronics</option>
+          <option value="">Crafts</option>
+          <option value="">Dolls & Bears</option>
+          <option value="">DVDs & Movies</option>
+          <option value="">Entertainment Memorabilia</option>
+          <option value="">Gift Cards & Coupons</option>
+          <option value="">Health & Beauty</option>
+          <option value="">Home & Garden</option>
+          <option value="">Jewellery & Watches</option>
+          <option value="">Music</option>
+          <option value="">Musical Instruments & Gear</option>
+          <option value="">Pet Supplies</option>
+          <option value="">Pottery & Glasses</option>
+          <option value="">Real Estate</option>
+          <option value="">Specialty Services</option>
+          <option value="">Sporting Goods</option>
+          <option value="">Sports Mem,Cards & Fan Shop</option>
+          <option value="">Stamps</option>
+          <option value="">Tickets & Experiences</option>
+          <option value="">Toys & Hobbies</option>
+          <option value="">Travel</option>
+          <option value="">Vehicle Parts & Accessories</option>
+          <option value="">Vehicles</option>
+          <option value="">Video Games & Consoles</option>
+          <option value="">Everything Else</option>
+        </select>
+        <button class="search-button">Search</button>
+        <a
+          href="https://www.ebay.com.my/sch/ebayadvsearch"
+          class="advanced-link"
+          >Advanced</a
+        >
+      </div>
+    </div>
+
+    <hr style="margin-bottom: 0" />
+    <div class="nav-wrapper">
+      <header class="nav2">
+        <table class="navbar2">
+          <tr>
+            <td><a href="">Saved</a></td>
+            <td class="electronics-hover"><a href="">Electronics</a></td>
+            <td class="fashion-hover"><a href="">Fashion</a></td>
+            <td class="computer-hover"><a href="">Computers & Tablets</a></td>
+            <td class="jewellery-hover"><a href="">Jewellery & Watches</a></td>
+            <td class="beauty-hover"><a href="">Beauty</a></td>
+            <td class="toys-hover"><a href="">Toys</a></td>
+            <td class="collectables-hover"><a href="">Collectables</a></td>
+            <td class="home-hover"><a href="">Home</a></td>
+          </tr>
+        </table>
+      </header>
+
+      <div class="box-style">
+        <div class="position-relative2">
+          <div id="electronic" class="electronic">
+            <table class="electronic-table" style="width: 200px">
+              <tr>
+                <th>Top Categories</th>
+              </tr>
+              <tr>
+                <td
+                  style="border-bottom: 1px solid black; padding-top: 5px"
+                ></td>
+              </tr>
+              <tr>
+                <td><a href="">Mobile Phones & Accessories</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Cameras & Photo</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Home Audio Stereos,Components</a></td>
+              </tr>
+            </table>
+            <table class="electronic-table" style="width: 200px">
+              <tr>
+                <th>More Categories</th>
+              </tr>
+              <tr>
+                <td
+                  style="border-bottom: 1px solid black; padding-top: 5px"
+                ></td>
+              </tr>
+              <tr>
+                <td><a href="">Gadgets</a></td>
+              </tr>
+              <tr>
+                <td><a href="">TV,Video & Audio Home</a></td>
+              </tr>
+              <tr>
+                <td><a href="">MP3 Players</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Televisions</a></td>
+              </tr>
+              <tr>
+                <td><a href="">GPS Units</a></td>
+              </tr>
+            </table>
+            <img src="asset/electronics.jpg" width="770" height="270" />
+          </div>
+        </div>
+      </div>
+
+      <div class="box-style2">
+        <div class="position-relative2">
+          <div id="fashion" class="fashion">
+            <table class="fashion-table" style="width: 200px">
+              <tr>
+                <th>Top Categories</th>
+              </tr>
+              <tr>
+                <td
+                  style="border-bottom: 1px solid black; padding-top: 5px"
+                ></td>
+              </tr>
+              <tr>
+                <td><a href="">Mens' Clothing</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Womens' Clothing</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Mens' Accessories</a></td>
+              </tr>
+            </table>
+            <table class="fashion-table" style="width: 200px">
+              <tr>
+                <th>More Categories</th>
+              </tr>
+              <tr>
+                <td
+                  style="border-bottom: 1px solid black; padding-top: 5px"
+                ></td>
+              </tr>
+              <tr>
+                <td><a href="">Womens' Accessories</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Womens' Shoes</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Mens' Shoes</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Mens' Sunglasses</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Womens' Handbags & Bags</a></td>
+              </tr>
+            </table>
+            <img src="asset/fashion.jpg" width="770" height="270" />
+          </div>
+        </div>
+      </div>
+
+      <div class="box-style3">
+        <div class="position-relative2">
+          <div id="computer" class="computer">
+            <table class="computer-table" style="width: 200px">
+              <tr>
+                <th>Top Categories</th>
+              </tr>
+              <tr>
+                <td
+                  style="border-bottom: 1px solid black; padding-top: 5px"
+                ></td>
+              </tr>
+              <tr>
+                <td><a href="">Laptop & Desktop Accessories</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Laptops & Netbooks</a></td>
+              </tr>
+              <tr>
+                <td><a href="">iPad/Tablet/eBook Accessories</a></td>
+              </tr>
+            </table>
+            <table class="computer-table" style="width: 200px">
+              <tr>
+                <th>More Categories</th>
+              </tr>
+              <tr>
+                <td
+                  style="border-bottom: 1px solid black; padding-top: 5px"
+                ></td>
+              </tr>
+              <tr>
+                <td><a href="">Drives,Storage & Media</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Home Networking & Connectivity</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Computer Components & Parts</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Desktops</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Keyboards & Mice</a></td>
+              </tr>
+            </table>
+            <img src="asset/computers.jpg" width="770" height="270" />
+          </div>
+        </div>
+      </div>
+
+      <div class="box-style4">
+        <div class="position-relative2">
+          <div id="jewellery" class="jewellery">
+            <table class="jewellery-table" style="width: 200px">
+              <tr>
+                <th>Top Categories</th>
+              </tr>
+              <tr>
+                <td
+                  style="border-bottom: 1px solid black; padding-top: 5px"
+                ></td>
+              </tr>
+              <tr>
+                <td><a href="">Watches</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Loose Diamonds & Gems</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Fine Jewellery</a></td>
+              </tr>
+            </table>
+            <table class="jewellery-table" style="width: 200px">
+              <tr>
+                <th>More Categories</th>
+              </tr>
+              <tr>
+                <td
+                  style="border-bottom: 1px solid black; padding-top: 5px"
+                ></td>
+              </tr>
+              <tr>
+                <td><a href="">Fashion Jewellery</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Jewellery Boxes & Organizers</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Mens' Jewellery</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Engagement & Wedding Jewellery</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Jewellery Design & Repair</a></td>
+              </tr>
+            </table>
+            <img src="asset/watches.jpg" width="770" height="270" />
+          </div>
+        </div>
+      </div>
+
+      <div class="box-style5">
+        <div class="position-relative2">
+          <div id="beauty" class="beauty">
+            <table class="beauty-table" style="width: 200px">
+              <tr>
+                <th>Top Categories</th>
+              </tr>
+              <tr>
+                <td
+                  style="border-bottom: 1px solid black; padding-top: 5px"
+                ></td>
+              </tr>
+              <tr>
+                <td><a href="">Fragrances</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Skincare</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Makeup</a></td>
+              </tr>
+            </table>
+            <table class="beauty-table" style="width: 200px">
+              <tr>
+                <th>More Categories</th>
+              </tr>
+              <tr>
+                <td
+                  style="border-bottom: 1px solid black; padding-top: 5px"
+                ></td>
+              </tr>
+              <tr>
+                <td><a href="">Massage</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Nail Care</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Hair Care</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Nutrition</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Healthcare</a></td>
+              </tr>
+            </table>
+            <img src="asset/beauty.jpg" width="770" height="270" />
+          </div>
+        </div>
+      </div>
+
+      <div class="box-style6">
+        <div class="position-relative2">
+          <div id="toys" class="toys">
+            <table class="toys-table" style="width: 200px">
+              <tr>
+                <th>Top Categories</th>
+              </tr>
+              <tr>
+                <td
+                  style="border-bottom: 1px solid black; padding-top: 5px"
+                ></td>
+              </tr>
+              <tr>
+                <td><a href="">Action Figures</a></td>
+              </tr>
+              <tr>
+                <td><a href="">TV,Movie & Character Toys</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Diecast Vehicles</a></td>
+              </tr>
+            </table>
+            <table class="toys-table" style="width: 200px">
+              <tr>
+                <th>More Categories</th>
+              </tr>
+              <tr>
+                <td
+                  style="border-bottom: 1px solid black; padding-top: 5px"
+                ></td>
+              </tr>
+              <tr>
+                <td><a href="">Other</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Wholesale Lots</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Building Toys</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Educational Toys</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Models & Kits</a></td>
+              </tr>
+            </table>
+            <img src="asset/toys.jpg" width="770" height="270" />
+          </div>
+        </div>
+      </div>
+
+      <div class="box-style7">
+        <div class="position-relative2">
+          <div id="collectables" class="collectables">
+            <table class="collectables-table" style="width: 200px">
+              <tr>
+                <th>Top Categories</th>
+              </tr>
+              <tr>
+                <td
+                  style="border-bottom: 1px solid black; padding-top: 5px"
+                ></td>
+              </tr>
+              <tr>
+                <td><a href="">Coins & Currency</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Animation Art & Characters</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Decorative Collectables</a></td>
+              </tr>
+            </table>
+            <table class="collectables-table" style="width: 200px">
+              <tr>
+                <th>More Categories</th>
+              </tr>
+              <tr>
+                <td
+                  style="border-bottom: 1px solid black; padding-top: 5px"
+                ></td>
+              </tr>
+              <tr>
+                <td><a href="">Fantasy & Magic</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Religion & Sprituality</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Breweriana,Beer</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Historical Memorabilia</a></td>
+              </tr>
+            </table>
+            <img src="asset/collectables.jpg" width="770" height="270" />
+          </div>
+        </div>
+      </div>
+
+      <div class="box-style8">
+        <div class="position-relative2">
+          <div id="home" class="home">
+            <table class="home-table" style="width: 200px">
+              <tr>
+                <th>Top Categories</th>
+              </tr>
+              <tr>
+                <td
+                  style="border-bottom: 1px solid black; padding-top: 5px"
+                ></td>
+              </tr>
+              <tr>
+                <td><a href="">Kitchen,Dining & Bar</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Home Furniture</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Major Appliances</a></td>
+              </tr>
+            </table>
+            <table class="home-table" style="width: 200px">
+              <tr>
+                <th>More Categories</th>
+              </tr>
+              <tr>
+                <td
+                  style="border-bottom: 1px solid black; padding-top: 5px"
+                ></td>
+              </tr>
+              <tr>
+                <td><a href="">Yard,Garden & Outdoor Living</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Home & Decor</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Food & Wine</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Pet Supplies</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Home Improvement</a></td>
+              </tr>
+            </table>
+            <img src="asset/home.jpg" width="770" height="270" />
+          </div>
+        </div>
+      </div>
+      <!-- End of nav wrapper-->
+    </div>
+
+    <hr style="margin-top: 0; margin-bottom: 0px" />
+
+    <div class="carouselsection">
+      <div
+        id="carouselExampleRide"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <!-- First item with section -->
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-8">
+                <img
+                  src="asset/carrousel1.JPG"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="col-md-4" style="background-color: #fad8f0">
+                <div class="carousel-section" style="color: #500750">
+                  <h2 style="font-weight: bolder">Save On Home Essentials</h2>
+                  <p>Up To 60% Discount. Free <br />Shipping.</p>
+                  <button class="btn shop-now1 hover1">Shop Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Second item with section -->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-8">
+                <img
+                  src="asset/carrousel2.JPG"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="col-md-4">
+                <div class="carousel-section" style="color: #500750">
+                  <h2 style="font-weight: bolder">Toys of Joy</h2>
+                  <p>Up To 50% Discount. Free<br />Shipping.</p>
+                  <button class="btn shop-now1">Shop Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Third item with section -->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-8">
+                <img
+                  src="asset/carrousel3.JPG"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="col-md-4">
+                <div class="carousel-section" style="color: #500750">
+                  <h2 style="font-weight: bolder">Get Active!</h2>
+                  <p>
+                    Up To 50% Off Sporting Goods.<br />
+                    Free Shipping.
+                  </p>
+                  <button class="btn shop-now1">Shop Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Fourth item with section -->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-8">
+                <img
+                  src="asset/carrousel4.JPG"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="col-md-4">
+                <div class="carousel-section" style="color: #500750">
+                  <h2 style="font-weight: bolder">
+                    Give Watches <br />The Time Of Day
+                  </h2>
+                  <p>Up To 30% Discount. Free<br />Shipping.</p>
+                  <button class="btn shop-now1">Shop Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleRide"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleRide"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col w-75">
+          <div
+            class="banner mt-5 d-flex justify-content-between align-items-center"
+          >
+            <div>
+              <p
+                style="
+                  font-weight: bolder;
+                  color: #fcf2bd;
+                  font-size: 22px;
+                  margin: 0;
+                "
+              >
+                August Finds for Men!
+              </p>
+              <p style="color: #fcf2bd; margin: 0">
+                Check out our men's clothing sale now!
+              </p>
+            </div>
+            <div>
+              <button class="btn banner-btn">Shop Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-2 autopart-container mx-0 p-5 pb-0">
+      <div class="row">
+        <div class="col w-75">
+          <h5 class="mb-4" style="font-weight: bold; margin-left: 20px">
+            Find Your Auto Parts
+          </h5>
+          <div class="d-flex autoparts">
+            <ul>
+              <a href="">
+                <li>
+                  <img src="asset/Mercedez.webp" class="rounded-circle" /><br />
+                  <p>Mercedez Benz</p>
+                </li>
+              </a>
+              <a href="">
+                <li>
+                  <img src="asset/BMW.webp" class="rounded-circle" />
+                  <p>BMW</p>
+                </li>
+              </a>
+              <a href="">
+                <li>
+                  <img src="asset/Honda.webp" class="rounded-circle" />
+                  <p>Honda</p>
+                </li>
+              </a>
+              <a href="">
+                <li>
+                  <img src="asset/Toyota.webp" class="rounded-circle" />
+                  <p>Toyota</p>
+                </li>
+              </a>
+              <a href="">
+                <li>
+                  <img src="asset/Mitsubishi.webp" class="rounded-circle" />
+                  <p>Mitsubishi</p>
+                </li>
+              </a>
+              <a href="">
+                <li>
+                  <img src="asset/Nissan.webp" class="rounded-circle" />
+                  <p>Nissan</p>
+                </li>
+              </a>
+              <a href="">
+                <li>
+                  <img src="asset/Proton.webp" class="rounded-circle" />
+                  <p>Proton</p>
+                </li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container autopart-container mx-0 p-5 pb-3">
+      <div class="row">
+        <div class="col w-75">
+          <h5 class="mb-4" style="font-weight: bold; margin-left: 20px">
+            Top Watch Brands
+          </h5>
+          <div class="d-flex autoparts">
+            <ul>
+              <a href="">
+                <li>
+                  <img src="asset/Casio.webp" class="rounded-circle" /><br />
+                  <p>Casio</p>
+                </li>
+              </a>
+              <a href="">
+                <li>
+                  <img src="asset/Gshock.webp" class="rounded-circle" />
+                  <p>G-Shock</p>
+                </li>
+              </a>
+              <a href="">
+                <li>
+                  <img src="asset/Seiko.webp" class="rounded-circle" />
+                  <p>Seiko</p>
+                </li>
+              </a>
+              <a href="">
+                <li>
+                  <img src="asset/Coach.webp" class="rounded-circle" />
+                  <p>Coach</p>
+                </li>
+              </a>
+              <a href="">
+                <li>
+                  <img src="asset/Michael.webp" class="rounded-circle" />
+                  <p>Michael Kors</p>
+                </li>
+              </a>
+              <a href="">
+                <li>
+                  <img src="asset/Suunto.webp" class="rounded-circle" />
+                  <p>Suunto</p>
+                </li>
+              </a>
+              <a href="">
+                <li>
+                  <img src="asset/Adidas.webp" class="rounded-circle" />
+                  <p>Adidas</p>
+                </li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr style="margin-bottom: 0" />
+
+    <div class="footer">
+      <div class="container">
+        <div class="row justify-content-center">
+          <table class="table-footer">
+            <tr>
+              <th>Buy</th>
+              <th>Sell</th>
+              <th>eBay Companies</th>
+              <th>About eBay</th>
+              <th>Help & Contact</th>
+            </tr>
+            <tr>
+              <td><a href="">Buying Basics</a></td>
+              <td><a href="">Sell in Malaysia</a></td>
+              <td><a href="">Shopping.com</a></td>
+              <td><a href="">Affiliates</a></td>
+              <td><a href="">Answer Centre</a></td>
+            </tr>
+            <tr>
+              <td><a href="">eBay Deals</a></td>
+              <td><a href="">Seller Centre</a></td>
+              <td></td>
+              <td><a href="">Law Enforcement</a></td>
+              <td><a href="">eBay Explained</a></td>
+            </tr>
+            <tr>
+              <td><a href="">eBay Stores</a></td>
+              <td><a href="">Postage Centre</a></td>
+              <th>Stay Connected</th>
+              <td></td>
+              <td><a href="">Education Centre</a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="">Sell to the US</a></td>
+              <td>
+                <a href="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-facebook"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+                    />
+                  </svg>
+                  <span>Facebook</span>
+                </a>
+              </td>
+              <td></td>
+              <td><a href="">Security Centre</a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="">International Selling</a></td>
+              <td>
+                <a href="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-twitter"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"
+                    />
+                  </svg>
+                  <span>Twitter</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="5"></td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <th><a href="" style="color: black">Community</a></th>
+            </tr>
+            <tr>
+              <td colspan="5"></td>
+            </tr>
+            <tr>
+              <td colspan="5"></td>
+            </tr>
+            <tr>
+              <td colspan="5"></td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <th>eBay Sites</th>
+            </tr>
+            <tr>
+              <td colspan="5"></td>
+            </tr>
+            <tr>
+              <td colspan="5"></td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td>
+                <div class="d-flex align-items-center box-wrap country-box">
+                  <div class="position-relative">
+                    <button
+                      class="btn btn-link p-0 d-flex align-items-center"
+                      onclick="toggleCountryMenu(event)"
+                      style="
+                        text-decoration: none;
+                        color: #707070;
+                        font-size: 12px;
+                      "
+                    >
+                      <img
+                        src="asset/flags/1x1/my.svg"
+                        width="24px"
+                        height="18px"
+                        style="margin-right: 7px"
+                      />
+                      <span>Malaysia</span>
+                      <img
+                        src="asset/down.png"
+                        width="10px"
+                        style="margin-left: 8px"
+                        class="dropdown-icon"
+                      />
+                    </button>
+
+                    <!-- Dropdown menu -->
+                    <div id="dropdown-menu2" class="dropdown-menu2">
+                      <table class="country-table">
+                        <tr>
+                          <td>
+                            <a href="">
+                              <div class="flag" style="padding-top: 10px">
+                                <img
+                                  src="asset/flags/1x1/ar.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Argentina</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag" style="padding-top: 10px">
+                                <img
+                                  src="asset/flags/1x1/cn.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>China</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag" style="padding-top: 10px">
+                                <img
+                                  src="asset/flags/1x1/hr.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Honduras</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag" style="padding-top: 10px">
+                                <img
+                                  src="asset/flags/1x1/mx.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Mexico</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag" style="padding-top: 10px">
+                                <img
+                                  src="asset/flags/1x1/pt.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Portugal</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag" style="padding-top: 10px">
+                                <img
+                                  src="asset/flags/1x1/us.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>United States</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/au.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Australia</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/co.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Columbia</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/hk.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Hong Kong</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/nl.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Netherlands</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/pr.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Puerto Rico</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/ve.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Venezuela</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/at.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Austria</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/cr.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Costa Rica</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/in.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>India</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/nz.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>New Zealand</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/sg.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Singapore</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/by.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Belarus</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/do.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Dominican Republic</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/ir.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Ireland</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/ni.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Nicaragua</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/es.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Spain</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/be.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Belgium</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/ec.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Ecuador</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/il.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Israel</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/pa.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Panama</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/ch.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Switzerland</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/bo.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Bolivia</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/sv.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>El Salvador</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/it.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Italy</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/pr.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Paraguay</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/tw.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Taiwan</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/br.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Brazil</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/fr.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>France</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/jp.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Japan</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/pe.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Peru</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/tr.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Turkey</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/ca.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Canada</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/de.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Germany</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/kz.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Kazakhstan</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/ph.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Phillipines</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td>
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/gb.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>United Kingdom</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding-bottom: 10px">
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/ch.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Chile</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td style="padding-bottom: 10px">
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/gt.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Guatemala</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td style="padding-bottom: 10px">
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/kr.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Korea</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td style="padding-bottom: 10px">
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/pl.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Poland</span>
+                              </div>
+                            </a>
+                          </td>
+                          <td style="padding-bottom: 10px">
+                            <a href="">
+                              <div class="flag">
+                                <img
+                                  src="asset/flags/1x1/uy.svg"
+                                  style="width: 24px; height: 18px"
+                                />
+                                <span>Uruguay</span>
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+
+          <p class="footer-text">
+            Copyright © 1995-2024 eBay Inc. All Rights Reserved.
+            <a href="">User Agreement</a>, <a href="">Privacy</a>,
+            <a href="">Payments Terms of Use</a>, <a href="">Cookies</a> and
+            <a href=""
+              >AdChoice
+              <img src="asset/adchoices.svg" width="12px" height="12px"
+            /></a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
